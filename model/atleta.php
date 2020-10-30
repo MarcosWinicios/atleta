@@ -1,0 +1,23 @@
+<?php 
+    class Atleta {
+        private $id;
+        private $nome;
+        private $idade;
+        private $altura;
+        private $peso;
+
+        public function __construct($nome, $idade, $altura, $peso){
+            $this->nome = $nome;
+            $this->idade = $idade;
+            $this->altura = $altura;
+            $this->peso = $peso;
+        }
+
+        public function __get($atributo){
+            return $this->$atributo;
+        }
+        public function __set($atributo, $valor){
+            $this->$atributo = $valor;
+        }
+    }
+?>
