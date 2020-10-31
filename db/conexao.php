@@ -3,7 +3,7 @@
         private $host = 'localhost';
         private $db = 'atividade2';
         private $usuario = 'marcos';
-        private $senha = '123456';
+        private $senha = '12345';
 
         public function conectar(){
             try {
