@@ -25,7 +25,7 @@
 
     //Deletar Atleta
     echo "<h2>Deletar Atleta</h2>";
-    $at = $atletaDao->pesquisarNome('Pedro');
+    $at = $atletaDao->pesquisarNomeAprox('Pedro');
     // $atletaDao->deletar($at);
 
     $atletas2 = $atletaDao->listarTudo();

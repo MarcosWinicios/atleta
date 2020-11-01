@@ -11,7 +11,7 @@
             <ul>
                 <li><a href="listarTudo.php">Listar Todos os atletas</a></li>
                 <li><a href="pesquisarAtleta.php">Pesquisar Atleta</a></li>
-                <li><a href="#">Cadastrar Atleta</a></li>
+                <li><a href="cadastrarAtleta.php">Cadastrar Atleta</a></li>
             </ul>
         </nav>
     

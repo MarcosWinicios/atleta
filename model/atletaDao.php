@@ -25,21 +25,24 @@
             return $atletas;
         }
 
-        public function pesquisarNome($nome){
-            $sql = "SELECT * FROM atleta WHERE nome like :nome";
-            $stmt = $this->conexao->prepare($sql);
-            $stmt->bindValue(':nome', "$nome");
-            $stmt->execute();
+        // public function pesquisarNome($nome){
+        //     $sql = "SELECT * FROM atleta WHERE nome like :nome";
+        //     $stmt = $this->conexao->prepare($sql);
+        //     $stmt->bindValue(':nome', "$nome");
+        //     $stmt->execute();
 
-            $resultado = $stmt->fetch(PDO::FETCH_OBJ);
+        //     $resultado = $stmt->fetch(PDO::FETCH_OBJ);
 
-            $atleta = new Atleta($resultado->nome, $resultado->idade, $resultado->altura, $resultado->peso);
-            $atleta->__set('id', $resultado->id);
+        //     echo "<pre>";
+        //     print_r($resultado);
+        //     echo "</pre>";
 
-            return $atleta;
+        //     $atleta = new Atleta($resultado->nome, $resultado->idade, $resultado->altura, $resultado->peso);
+        //     $atleta->__set('id', $resultado->id);
 
+        //     return $atleta;
+        // }
 
-        }
         public function pesquisarNomeAprox($nome){
             $sql = "SELECT * FROM atleta WHERE nome like :nome";
             $stmt = $this->conexao->prepare($sql);
@@ -59,7 +62,7 @@
         }
 
         public function cadastrar(Atleta $a){
-            $sql = 'INSERT INTO atleta (nome, idade, altura, peso) VALUES (:nome, :idade:, :altura, :peso)';
+            $sql = 'INSERT INTO atleta (nome, idade, altura, peso) VALUES (:nome, :idade, :altura, :peso)';
             $stmt = $this->conexao->prepare($sql);
             $stmt->bindValue(':nome', $a->__get('nome'));
             $stmt->bindValue(':idade', $a->__get('idade'));
