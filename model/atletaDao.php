@@ -24,24 +24,24 @@
 
             return $atletas;
         }
+        
+        public function pesquisarId($id){
+            $sql = "SELECT * FROM atleta WHERE id like :id";
+            $stmt = $this->conexao->prepare($sql);
+            $stmt->bindValue(':id', $id);
+            $stmt->execute();
 
-        // public function pesquisarNome($nome){
-        //     $sql = "SELECT * FROM atleta WHERE nome like :nome";
-        //     $stmt = $this->conexao->prepare($sql);
-        //     $stmt->bindValue(':nome', "$nome");
-        //     $stmt->execute();
+            $resultado = $stmt->fetch(PDO::FETCH_OBJ);
 
-        //     $resultado = $stmt->fetch(PDO::FETCH_OBJ);
+            echo "<pre>";
+            print_r($resultado);
+            echo "</pre>";
 
-        //     echo "<pre>";
-        //     print_r($resultado);
-        //     echo "</pre>";
+            $atleta = new Atleta($resultado->nome, $resultado->idade, $resultado->altura, $resultado->peso);
+            $atleta->__set('id', $resultado->id);
 
-        //     $atleta = new Atleta($resultado->nome, $resultado->idade, $resultado->altura, $resultado->peso);
-        //     $atleta->__set('id', $resultado->id);
-
-        //     return $atleta;
-        // }
+            return $atleta;
+        }
 
         public function pesquisarNomeAprox($nome){
             $sql = "SELECT * FROM atleta WHERE nome like :nome";

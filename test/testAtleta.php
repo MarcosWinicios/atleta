@@ -44,6 +44,13 @@
     echo "<pre>";
     print_r($atletas3);
     echo "</pre>";
+
+    // Pesquisa por ID
+    echo "<h1>Atleta por ID</h1>";
+
+    $a2t = $atletaDao->pesquisarId(3);
+
+
     
 
 ?>

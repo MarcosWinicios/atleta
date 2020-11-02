@@ -8,7 +8,7 @@
     <body>
         <h1>Pesquisar Atleta</h1>
         
-        <form action="pesquisarAtleta.php" method="GET">
+        <form action="pesquisarAtleta.php" method="get">
             <label for="nome">Nome:</label>
             <input type="search" name="nome" placeholder="Digite o nome do atleta" id="nome">
             <input type="submit" value="Pesquisar">
@@ -37,6 +37,7 @@
           
 
         ?>
-
+        <p><a href="inicio.php">Home</a></p>
+        <p><a href="cadastrarAtleta.php">Inserir novo Atleta</a></p>
     </body>
 </html>
