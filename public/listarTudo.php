@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Lista completa de atletas</h1>
-        <table border="2px">
+        <table border="2">
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
@@ -40,7 +40,7 @@
             ?>
         </table>
        
-        <p><a href="inicio.php">Home</a></p>
+        <p><a href="index.php">Home</a></p>
         <p><a href="cadastrarAtleta.php">Inserir novo Atleta</a></p>
     </body>
 </html>

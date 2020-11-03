@@ -21,7 +21,7 @@
                 <input type="submit" value="Cadastrar">
             </form>
         </section>
-        <p><a href="inicio.php">Home</a></p>
+        <p><a href="index.php">Home</a></p>
        
     </body>
 </html>
